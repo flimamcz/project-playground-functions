@@ -5,18 +5,18 @@ function compareTrue(parameter1, parameter2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  return phrase.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayName) {
+  return `${arrayName[arrayName.length - 1]}, ${arrayName[0]}`;
 }
 
 // Desafio 5
