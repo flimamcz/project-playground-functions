@@ -33,7 +33,21 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
+  let newArray = [];
+
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
+      newArray.push('fizz');
+    } else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
+      newArray.push('buzz');
+    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else {
+      newArray.push('bug!');
+    }
+  }
+  return newArray;
 }
 
 // Desafio 9
