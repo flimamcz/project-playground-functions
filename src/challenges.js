@@ -29,32 +29,20 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  let newArray = [];
-
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
-      newArray.push('fizz');
-    } else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
-      newArray.push('buzz');
-    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      newArray.push('fizzBuzz');
-    } else {
-      newArray.push('bug!');
-    }
-  }
-  return newArray;
+function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
 }
-function decode() {
+
+console.log(encode('Hi there!'));
+
+function decode(phrase) {
   // seu código aqui
 }
 
