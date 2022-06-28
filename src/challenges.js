@@ -60,29 +60,25 @@ function decode(phrase) {
 
 // Desafio 10
 function techList(array, string) {
-  let newArrayObj = []
+  let newArrayObj = [];
 
-  if(!array.length || !string){
-    return 'Vazio!'
+  if (!array.length || !string) {
+    return 'Vazio!';
   }
 
-  for(let index = 0; index < array.length; index +=1){
+  for (let index = 0; index < array.length; index += 1) {
     newArrayObj.push({
       tech: array[index],
-      name: string
-    })
+      name: string,
+    });
   }
-
 
   return newArrayObj.sort((a, b) => {
     if (a.tech < b.tech) {
-      return -1
+      return -1;
     }
- })
-
+  });
 }
-
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'))
 
 module.exports = {
   calcArea,
