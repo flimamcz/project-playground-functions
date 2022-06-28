@@ -54,16 +54,35 @@ function fizzBuzz(array) {
 function encode(phrase) {
 }
 
-console.log(encode('Hi there!'));
-
 function decode(phrase) {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  let newArrayObj = []
+
+  if(!array.length || !string){
+    return 'Vazio!'
+  }
+
+  for(let index = 0; index < array.length; index +=1){
+    newArrayObj.push({
+      tech: array[index],
+      name: string
+    })
+  }
+
+
+  return newArrayObj.sort((a, b) => {
+    if (a.tech < b.tech) {
+      return -1
+    }
+ })
+
 }
+
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'))
 
 module.exports = {
   calcArea,
