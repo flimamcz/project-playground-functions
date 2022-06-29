@@ -53,7 +53,6 @@ function catAndMouse(mouse, cat1, cat2) {
   return nextToTheCat
 }
 
-
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
@@ -74,10 +73,29 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(phrase) {
+  if (phrase.length) {
+    let phraseEncode = phrase.replace(/a/g, '1');
+    phraseEncode = phraseEncode.replace(/e/g, 2);
+    phraseEncode = phraseEncode.replace(/i/g, 3);
+    phraseEncode = phraseEncode.replace(/o/g, 4);
+    phraseEncode = phraseEncode.replace(/u/g, 5);
+    return phraseEncode;
+  } else {
+    return 'Informe uma frase!';
+  }
 }
 
 function decode(phrase) {
-  // seu código aqui
+  if (phrase.length) {
+    let phraseDecode = phrase.replace(/1/g, 'a');
+    phraseDecode = phraseDecode.replace(/2/g, 'e');
+    phraseDecode = phraseDecode.replace(/3/g, 'i');
+    phraseDecode = phraseDecode.replace(/4/g, 'o');
+    phraseDecode = phraseDecode.replace(/5/g, 'u');
+    return phraseDecode;
+  } else {
+    return 'Informe uma frase!';
+  }
 }
 
 // Desafio 10
