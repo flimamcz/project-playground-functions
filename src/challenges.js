@@ -25,8 +25,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-
-const array = [1, 23, 23, 21, 11, 22];
 function highestCount(array) {
   const maxNumber = Math.max(...array);
   let sumNumberMax = 0
@@ -38,11 +36,23 @@ function highestCount(array) {
   return sumNumberMax;
 }
 
-console.log(highestCount(array))
-
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  let positionCatOne = Math.abs(mouse - cat1)
+  let positionCatTwo = Math.abs(mouse - cat2)
+  let nextToTheCat = ''
+
+  if (positionCatOne < positionCatTwo){
+    nextToTheCat = 'cat1'
+  } else if (positionCatTwo < positionCatOne){
+    nextToTheCat = 'cat2'
+  } else {
+    nextToTheCat = 'os gatos trombam e o rato foge'
+  }
+
+  return nextToTheCat
 }
+
 
 // Desafio 8
 function fizzBuzz(array) {
