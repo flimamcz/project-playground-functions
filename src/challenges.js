@@ -38,19 +38,18 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let positionCatOne = Math.abs(mouse - cat1)
-  let positionCatTwo = Math.abs(mouse - cat2)
-  let nextToTheCat = ''
+  let positionCatOne = Math.abs(mouse - cat1);
+  let positionCatTwo = Math.abs(mouse - cat2);
+  let nextToTheCat = '';
 
-  if (positionCatOne < positionCatTwo){
-    nextToTheCat = 'cat1'
-  } else if (positionCatTwo < positionCatOne){
-    nextToTheCat = 'cat2'
+  if (positionCatOne < positionCatTwo) {
+    nextToTheCat = 'cat1';
+  } else if (positionCatTwo < positionCatOne) {
+    nextToTheCat = 'cat2';
   } else {
-    nextToTheCat = 'os gatos trombam e o rato foge'
+    nextToTheCat = 'os gatos trombam e o rato foge';
   }
-
-  return nextToTheCat
+  return nextToTheCat;
 }
 
 // Desafio 8
@@ -80,8 +79,6 @@ function encode(phrase) {
     phraseEncode = phraseEncode.replace(/o/g, 4);
     phraseEncode = phraseEncode.replace(/u/g, 5);
     return phraseEncode;
-  } else {
-    return 'Informe uma frase!';
   }
 }
 
@@ -93,8 +90,6 @@ function decode(phrase) {
     phraseDecode = phraseDecode.replace(/4/g, 'o');
     phraseDecode = phraseDecode.replace(/5/g, 'u');
     return phraseDecode;
-  } else {
-    return 'Informe uma frase!';
   }
 }
 
