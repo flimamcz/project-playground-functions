@@ -1,5 +1,4 @@
 // Desafio 11
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 function generatePhoneNumber(array) {
   const message = 'não é possível gerar um número de telefone com esses valores';
   if (array.length !== 11) return 'Array com tamanho incorreto.';
@@ -16,12 +15,22 @@ function generatePhoneNumber(array) {
   return `(${array.slice(0, 2).join('')}) ${array.slice(2, 7).join('')}-${array.slice(7, 11).join('')}`;
 }
 
-console.log(generatePhoneNumber(numbers));
+generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  // if((lineA < lineB + lineC) || (lineB < lineA + lineC) || (lineC < lineA + lineB)){
+  //   return true
+  // }
+
+  const verifyLineA = lineA < lineB + lineC && (lineA > Math.abs(lineB - lineC))
+  const verifyLineB = lineB < lineA + lineC && (lineB > Math.abs(lineA - lineC))
+  const verifyLineC = lineC < lineA + lineB && (lineC > Math.abs(lineA - lineB))
+
+  return verifyLineA && verifyLineB && verifyLineC
 }
+
+console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate() {
