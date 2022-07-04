@@ -30,12 +30,26 @@ function triangleCheck(lineA, lineB, lineC) {
   return verifyLineA && verifyLineB && verifyLineC
 }
 
-console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+
+  let numsStr = string.replace(/[^0-9]/g,'');
+  let sumNumbers = 0
+  for(let index = 0; index < numsStr.length; index += 1){
+    sumNumbers += parseInt(numsStr[index])
+  }
+
+  if(sumNumbers === 1){
+    return sumNumbers + ' copo de água'
+  } else{
+    return sumNumbers + ' copos de água'
+  }
+
 }
+
+console.log(hydrate('1 cachaça, 4 leite, 1 coca'))
 
 module.exports = {
   generatePhoneNumber,
